@@ -34,6 +34,16 @@ int main(int argc, const char * argv[]) {
         NSLog(@"my target number is %@", listOfNumbers[index]);
         
         
+        NSArray *listOfNumbers2 = @[@3,@5,@5,@9,@11,@13];
+        MyArray *myArray2 = [[MyArray alloc] init];
+        
+        int index2 = [myArray searchBinary:5 min:0 max:(int)listOfNumbers.count - 1 myArray:listOfNumbers];
+
+        
+        
+        
+        
+        
         
     }
     return 0;
