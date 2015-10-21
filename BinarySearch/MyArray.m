@@ -8,40 +8,30 @@
 
 #import "MyArray.h"
 
+
+
+
+
 @implementation MyArray
 
-
-
-
-
-
-
-
--(int)searchBinary:(int)target myArray:(NSArray *)sortArray {
-    
-    return [self searchBinary:(int)target min:0 max:(int)sortArray -1  myArray:(NSArray *)sortArray];
-    
-}
-    
 
 -(int)searchBinary:(int)target min:(int)minArray max:(int)maxArray myArray:(NSArray *)sortArray {
     
     int mid = (minArray + maxArray) / 2;
     
-    NSNumber *midNumber = sortArray[mid];
     
-    if (target == midNumber.intValue) {
+    if (target == [sortArray[mid] intValue]) {
         
         return mid;
         
-    } else if (target > midNumber.intValue) {
+    } else if (target > [sortArray[mid] intValue]) {
         
         minArray = mid + 1;
         return [self searchBinary:target min:minArray max:maxArray myArray:sortArray];
         
         
         
-    } else if (target < midNumber.intValue) {
+    } else if (target < [sortArray[mid] intValue]) {
         
         maxArray = mid - 1;
         return [self searchBinary:target min:minArray max:maxArray myArray:sortArray];
@@ -53,7 +43,13 @@
 
 }
 
-
+-(int)searchBinary:(int)target myArray:(NSArray *)sortArray {
+    
+    
+    
+    return [self searchBinary:(int)target min:0 max:(int)sortArray -1  myArray:(NSArray *)sortArray];
+    
+}
 
     
     

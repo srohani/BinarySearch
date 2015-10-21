@@ -27,7 +27,7 @@ int main(int argc, const char * argv[]) {
         
         MyArray *myArray = [[MyArray alloc] init];
 
-        int index = [myArray searchBinary:7 min:0 max:(int)listOfNumbers.count - 1 myArray:listOfNumbers];
+        int index = [myArray searchBinary:3 min:0 max:(int)listOfNumbers.count - 1 myArray:listOfNumbers];
         int searchIndex = [myArray searchBinary:3 myArray:listOfNumbers];
         
         
