@@ -41,6 +41,14 @@
 
 }
 
+-(int)findIndexOfNumber:(int)target myArray:(NSArray *)sortArray {
+    
+    return [self searchBinary:(int)target min:(int)minArray max:(int)maxArray myArray:(NSArray *)sortArray - 1];
+
+    
+    
+    
+}
 
 
 

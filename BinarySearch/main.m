@@ -26,19 +26,18 @@ int main(int argc, const char * argv[]) {
         NSArray *listOfNumbers = @[@3,@5,@7,@9,@11,@13];
         
         MyArray *myArray = [[MyArray alloc] init];
+        MyArray *myArraySearch = [[MyArray alloc] init];
+
         int index = [myArray searchBinary:7 min:0 max:(int)listOfNumbers.count - 1 myArray:listOfNumbers];
+        
+        [listOfNumbers indexOfObject:@""];
+        
         
         
         
         NSLog(@"array you want is in the position %d", index);
         NSLog(@"my target number is %@", listOfNumbers[index]);
         
-        
-        NSArray *listOfNumbers2 = @[@3,@5,@5,@9,@11,@13];
-        MyArray *myArray2 = [[MyArray alloc] init];
-        
-        int index2 = [myArray searchBinary:5 min:0 max:(int)listOfNumbers.count - 1 myArray:listOfNumbers];
-
         
         
         
