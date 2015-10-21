@@ -12,6 +12,18 @@
 
 
 
+
+
+
+
+
+-(int)searchBinary:(int)target myArray:(NSArray *)sortArray {
+    
+    return [self searchBinary:(int)target min:0 max:(int)sortArray -1  myArray:(NSArray *)sortArray];
+    
+}
+    
+
 -(int)searchBinary:(int)target min:(int)minArray max:(int)maxArray myArray:(NSArray *)sortArray {
     
     int mid = (minArray + maxArray) / 2;
@@ -41,14 +53,12 @@
 
 }
 
--(int)findIndexOfNumber:(int)target myArray:(NSArray *)sortArray {
-    
-    return [self searchBinary:(int)target min:(int)minArray max:(int)maxArray myArray:(NSArray *)sortArray - 1];
+
 
     
     
     
-}
+
 
 
 

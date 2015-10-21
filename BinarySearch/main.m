@@ -23,17 +23,16 @@ int main(int argc, const char * argv[]) {
         
 //        NSArray *listOfNumbers = @[@1,@2,@3,@4,@5,@6,@7,@8,@9,@10,@11,@12,@13,@14,@15,@16,@17,@18,@19,@20,@21,@22,@23,@24,@25,@26];
         
-        NSArray *listOfNumbers = @[@3,@5,@7,@9,@11,@13];
+        NSArray *listOfNumbers = @[@3,@3,@7,@9,@11,@13];
         
         MyArray *myArray = [[MyArray alloc] init];
-        MyArray *myArraySearch = [[MyArray alloc] init];
 
         int index = [myArray searchBinary:7 min:0 max:(int)listOfNumbers.count - 1 myArray:listOfNumbers];
-        
-        [listOfNumbers indexOfObject:@""];
-        
+        int searchIndex = [myArray searchBinary:3 myArray:listOfNumbers];
         
         
+        
+        NSLog(@"%d", searchIndex);
         
         NSLog(@"array you want is in the position %d", index);
         NSLog(@"my target number is %@", listOfNumbers[index]);

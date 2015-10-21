@@ -13,6 +13,6 @@
 
 -(int)searchBinary:(int)target min:(int)minArray max:(int)maxArray myArray:(NSArray *)sortArray;
 
--(int)findIndexOfNumber:(int)target myArray:(NSArray *)sortArray;
+-(int)searchBinary:(int)target myArray:(NSArray *)sortArray;
 
 @end
